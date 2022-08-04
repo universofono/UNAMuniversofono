@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="actividades para ayuda en rehabilitacion de pacientes afasicos">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link href="https://framework-gb.cdn.gob.mx/gm/accesibilidad/css/gobmx-accesibilidad.min.css" rel="stylesheet">      <!-- ACCESIBILIDAD -->
+    
+    <title>Lista Pacientes</title>
+    <style>
+		.accesibility li .icons{
+			background-color: #15b095;
+		}
+		.icon-box-simple{
+			background-color: #15b095;
+		}
+		.accesibility li span{
+			color: #000;
+		}
+        .icon{
+			color: #15b095;
+		}
+	</style>
+</head>
+<body>
+    <div class="fondoAccesibilidad"></div>
+    <header class="header">
+        <nav class="container menu">
+            <a class="menu__logo" href="/">
+                <img class="menu__img" src="/img/logo_menu.png" alt="Logo Universo Fono">
+            </a>
+            <ul class="menu__links">
+                <li class="menu__item"><a class="menu__link" href="/about">Nosotros</a></li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/activities">Actividades</a>
+                    <ul style="display:none;" class="dropdown">
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Comunidad</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Terapia</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+         
+                <a class="menu__account" href="/users/profile">
+                    <img class="account__img" src="img/ico_account.png" alt="">
+                </a>
+                <a class="menu__link menu__link--unete" href="/joinUp"> <span class="link__unete-txt">Unete</span></a>
+            </ul>
+            <a href="#" class="menu__burger" id="menu__burger-click">
+                <img src="/img/menu-burger.svg" alt="">
+            </a>
+        
+        </nav><!-- container menu-->
+    </header>
+
+    <main class="expedients__container centalBoxPaciente">
+        <link rel="stylesheet" href="/css/app.css">
+        <div class="questions__container">
+          <div class="textTop__container">
+              <p class="textListExp">lista de expedientes</p>
+              <a href="/pacientes/nuevoPaciente" class="btn_text">nuevo paciente</a>  
+          </div>
+        
+          <div class="tableExpediente">
+              <table>
+                <thead>
+                    <tr>
+                    <th>id</th>
+                    <th>Nombre(s)</th>
+                    <th>Apellido(s)</th>
+                    <th>Clave</th>
+                    <th>Expediente</th>
+                    <th>Diagnóstico</th>
+                    </tr>
+                </thead>
+                <% i = 0, listaPaciente.forEach(paciente => {%>
+                    <tr class="styleBodyTable">
+                        <td id="ide"><%= listaPaciente[i++]._id %></td>
+                        <td><%= paciente.nombre %></td>
+                        <td><%= paciente.apellidos %></td>
+                        <td><%= paciente.clave  %></td>
+                        <td>#<%= paciente.expediente %></td>
+                        <td><%= paciente.diagnostico %></td>
+                        <td class="styleVerMas"><a href="/expCompleto" class="btn_verMas"> ver más </a> </td>
+                    </tr>
+                <%})%>
+            </table>
+            
+          </div>
+        </div>
+        <img src="img/flechaVerde.png" alt="" class="greenArrow">
+        
+    </main>
+
+    
+
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="footer__img">
+                <img src="/img/logo_menu-blanco.png" alt="">
+            </div>
+            <div class="footer__text">
+                <h3>#UniversoFono</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur omnis, voluptate quos recusandae ut reprehenderit minus laborum quibusdam voluptatem, corrupti ipsa temporibus iure exercitationem eum quisquam? Fugit maiores consequatur laboriosam!</p>
+            </div>
+
+            <div class="footer__privacy">
+                <h3>Aviso de privacidad</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, molestiae. Repellat ea ipsum, odit possimus vel sit cum natus, neque quae labore delectus soluta fuga ipsam. Eaque laudantium tenetur hic!</p>
+                <p><span>Escribenos</span><br>
+                 Hola@universofono.com.mx
+                <p><span>Llamanos</span><br> 000 000 000 000</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://framework-gb.cdn.gob.mx/gm/accesibilidad/js/gobmx-accesibilidad.min.js"></script>   <!-- ACCESIBILIDAD -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/gameQuizSara.js"></script>
+    <script src="/js/endQuizSara.js"></script>
+</body>
+</html>
+

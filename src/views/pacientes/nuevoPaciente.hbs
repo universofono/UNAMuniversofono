@@ -1,0 +1,50 @@
+<div class="expedients__container centalBoxPaciente">
+  {{>errors}}
+    <div class="nuevoPaciente__container">
+      <div class="textTopNuevoPac__container">
+          <p class="textNuevoPac">nuevo paciente</p>
+      </div>
+      <form class="signUp__form" action="/pacientes/nuevoPaciente" method="POST">
+        <div class="infoPersonal">Información personal</div>
+          <div class="nomApell_Container">
+            <div>Nombres(s)</div> 
+            <div>Apellido(s)</div>
+            <input type="text" name="nombre">
+            <input type="text" name="apellidos">
+          </div>
+          <div class="fechGenEdad">
+            <div>Fecha de nacimiento</div> 
+            <div>Género</div>
+            <div>Edad</div>
+            <input type="text" name="fechaNac">
+            <input type="text" name="genero" list="listaGen" required size="2">
+            <input type="text" name="edad">
+          </div>
+          <div class="infoPersonal">Información de contacto</div>
+          <div class="nomApell_Container">
+            <div>Teléfono</div> 
+            <div>Correo electrónico</div>
+            <input type="text" name="telefono">
+            <input type="text" name="email">
+          </div>
+          <div class="infoPersonal">Información de registro</div>
+          <div class="clavExpDiag">
+            <div>Clave</div> 
+            <div># de expediente</div>
+            <div>Diagnóstico</div>
+            <input type="text" name="clave">
+            <input type="text" name="expediente">
+            <input type="text" name="diagnostico">
+          </div>
+          <div class="styleAdd">
+            <input type="submit" name="" id="" value="Registrate" class="btn">
+          </div>
+        </div>
+      </form>
+</div>
+<a href="/listaPaciente"><img src="/img/flechaMorada.png" alt="" class="purpleArrow"> </a> 
+<datalist  id="listaGen" >
+  <option value="Femenino"></option>
+  <option value="Masculino"></option>
+</datalist>
+

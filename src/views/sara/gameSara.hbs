@@ -1,0 +1,68 @@
+<main class="cajaCentralGame">
+    <div class="cajaPreguntas">
+        <ul class="listaContenido">
+            <div class="barSuperior"> 
+                <!-- Número de pregunta 1-4 puntaje # -->
+                <li class="barSuperiorPregunta">
+                    <h1 id="progressText"></h1> 
+                </li>
+                
+                <li class="barSuperiorScore">
+                    <h3>Puntos:</h3>
+                    <h3 id="score">0</h3>
+                </li>
+                
+            </div>
+            <li class="cajaBarras">
+                <div id="barra1"></div>
+                <div id="barra2"></div>
+                <div id="barra3"></div>
+                <div id="barra4"></div>
+            </li>
+            <li class="pregunta">
+                <h1  id="question"></h1> <!-- Imprime Pregunta-->
+            </li>
+            <li class="cajaPosibleRespuestas">
+                <div id="containerA" class="choice-container">
+                    <div id="activeA"></div> <!-- Circulo False | True-->
+                    <p class="choice-prefix"></p>
+                    <p class="choice-text" data-number="1">choice</p>
+                    <div id="mensajeA"></div> <!-- Mensaje Jirafa-->
+                </div>
+
+                <div id="containerB" class="choice-container">
+                    <div id="activeB"></div> <!-- Circulo False | True-->
+                    <p class="choice-prefix"></p>
+                    <p class="choice-text" data-number="2">choice 2</p>
+                </div>
+
+                <div id="containerC" class="choice-container">
+                    <div id="activeC"></div> <!-- Circulo False | True-->
+                    <p class="choice-prefix"></p>
+                    <p class="choice-text" data-number="3">choice 3</p>
+                    <div id="mensajeC"></div> <!-- Mensaje caracol-->
+                </div>
+
+                <div id="containerD" class="choice-container">
+                    <div id="activeD"></div> <!-- Circulo False | True-->
+                    <p class="choice-prefix"></p>
+                    <p class="choice-text" data-number="4">choice 4</p>
+                </div>
+                
+            </li>
+            
+        </ul>
+        
+    </div>
+    <div class="imgCesped">
+        <img src="img/imgSaraQuiz/Cesped.png">
+    </div>
+    <div class="containerImgSara"><!-- Imagen Orugra-->
+        <div id="mensajeD"></div> <!-- Mensaje Oruga-->
+    </div>    
+    
+    <div id ="mensajeB"> </div> <!-- Mensaje Mariposa-->
+
+    <div id="progressBarFull"></div> <!--Preguntas-->
+    
+</main>

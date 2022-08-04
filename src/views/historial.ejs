@@ -1,0 +1,35 @@
+
+<main class="expedients__container centalBoxPaciente">
+    <link rel="stylesheet" href="/css/app.css">
+    <div class="questions__container">
+      <div class="textTop__container">
+          <p class="textListExp">lista de expedientes</p>
+          <a href="/pacientes/nuevoPaciente" class="btn_text">nuevo paciente</a>  
+      </div>
+    
+      <div class="tableExpediente">
+          <table>
+            <thead>
+                <tr>
+                <th>Nombre(s)</th>
+                <th>Apellido(s)</th>
+                <th>Clave</th>
+                <th>Expediente</th>
+                <th>Diagnóstico</th>
+                </tr>
+            </thead>
+            <%listaPaciente.forEach(paciente => {%>
+                <tr class="styleBodyTable">
+                    <td><%= paciente.nombre %></td>
+                    <td><%= paciente.apellidos %></td>
+                    <td><%= paciente.clave  %></td>
+                    <td>#<%= paciente.expediente %></td>
+                    <td><%= paciente.diagnostico %></td>
+                    <td class="styleVerMas"><a href="expeCompleto.html" class="btn_verMas">ver más</a> </td>
+                </tr>
+            <%})%>
+        </table>
+      </div>
+    </div>
+    <img src="img/flechaVerde.png" alt="" class="greenArrow">
+</main>
